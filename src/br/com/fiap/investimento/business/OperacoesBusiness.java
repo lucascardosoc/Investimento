@@ -1,11 +1,13 @@
 package br.com.fiap.investimento.business;
 
-public class OperacoesBusiness {
+public abstract class OperacoesBusiness {
 	
 	public void aplicar () {
+		System.out.println("Solicitando a autenticacão via QRCode");
 		System.out.println("Autenticacão efetuada para aplicacão");
 		System.out.println("Geral - Aplicacão efetuada com sucesso");
 		System.out.println("Token gerado com sucesso");
+		System.out.println(this.getClass());
 	}
 	
 	public void resgatar() {

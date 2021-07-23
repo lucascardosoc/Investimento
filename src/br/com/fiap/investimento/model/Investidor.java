@@ -2,7 +2,7 @@ package br.com.fiap.investimento.model;
 
 import java.util.Date;
 
-public class Investidor {
+public abstract class Investidor {
 	
 	private int investidorId;
 	private String nome;
