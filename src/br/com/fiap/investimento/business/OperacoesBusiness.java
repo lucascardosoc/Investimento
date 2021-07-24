@@ -2,7 +2,7 @@ package br.com.fiap.investimento.business;
 
 public abstract class OperacoesBusiness {
 	
-	public void aplicar () {
+	public void aplicar() {
 		System.out.println("Solicitando a autenticacão via QRCode");
 		System.out.println("Autenticacão efetuada para aplicacão");
 		System.out.println("Geral - Aplicacão efetuada com sucesso");
@@ -15,9 +15,26 @@ public abstract class OperacoesBusiness {
 		System.out.println("Token gerado com sucesso");
 	}
 	
-	public void exibirExtrato() {
+	private void exibirExtrato() {
 		System.out.println("Imprimindo o extrato na tela");
 		System.out.println("Trilha de auditoria de impressão do extrato");
+	}
+	
+	public void exibirExtrato(String formatoGeracaoArquivo) {
+		exibirExtrato();
+		System.out.println("Gerando o arquivo do tipo " + formatoGeracaoArquivo);
+	}
+	
+	public void exibirExtrato(boolean imprimirLogotipo) {
+		if (imprimirLogotipo) {
+			System.out.println("Logotipo");
+		}
+		exibirExtrato();
+	}
+	
+	public void exibirExtrato(boolean imprimirLogotipo, String formatoGeracaoArquivo) {
+		exibirExtrato(imprimirLogotipo);
+		System.out.println("Gerando o arquivo do tipo " + formatoGeracaoArquivo);
 	}
 	
 }
