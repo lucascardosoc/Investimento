@@ -20,6 +20,4 @@ public class InvestidorInstitucional extends InvestidorPJ {
 				+ getPerfilRisco() + ", getDataAberturaConta()=" + getDataAberturaConta() + "]";
 	}
 	
-	
-
 }
