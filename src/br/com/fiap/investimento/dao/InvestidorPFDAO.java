@@ -1,6 +1,8 @@
 package br.com.fiap.investimento.dao;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 import br.com.fiap.investimento.model.InvestidorPF;
 
@@ -33,7 +35,7 @@ public class InvestidorPFDAO {
 	}
 	
 	// listarTodos - SELECT ALL
-	public ArrayList<InvestidorPF> listarTodos() {
+	public List<InvestidorPF> listarTodos() {
 		
 		// Obtendo o Driver - Oracle / Mysql / SQLServer
 		// Abrindo a Conexão
@@ -42,7 +44,7 @@ public class InvestidorPFDAO {
 		// Executo o comando SQL
 		// Obtendo o retorno do SQL
 		// Integrando o retorno SQL com o Java
-		ArrayList<InvestidorPF> investidores = new ArrayList<InvestidorPF>();
+		List<InvestidorPF> investidores = new ArrayList<InvestidorPF>();
 		investidores.add(new InvestidorPF("Felipe", 10));
 		investidores.add(new InvestidorPF("Flávio", 11));
 		investidores.add(new InvestidorPF("Marihá", 12));

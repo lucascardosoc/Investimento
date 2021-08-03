@@ -2,6 +2,7 @@ package br.com.fiap.investimento.test;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.Vector;
 
 public class StringListTest {
 
@@ -20,6 +21,13 @@ public class StringListTest {
 		}
 		
 		
+		Vector<String> vector = new Vector<String>();
+		vector.add("Victor");
+		vector.add("Flávio");
+		vector.add("Giovanna");
+		vector.add("Marihá");
+		
+		System.out.println(vector);
 		
 		
 		
