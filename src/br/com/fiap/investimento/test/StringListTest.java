@@ -1,36 +1,54 @@
 package br.com.fiap.investimento.test;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class StringListTest {
 
 	public static void main(String[] args) {
 		
-		ArrayList<String> lista = new ArrayList<String>();
-		lista.add("Victor");
-		lista.add("Flávio");
-		lista.add("Giovanna");
-		lista.add("Marihá");
+		ArrayList<String> listaArray = new ArrayList<String>();
 		
-		lista.add(2, "Lucas");
-		lista.set(1, "Moreni");
+		LinkedList<String> listaLinked = new LinkedList<>();
+		listaLinked.add("Victor");
+		listaLinked.add("Flávio");
+		listaLinked.add("Giovanna");
+		listaLinked.add("Marihá");
 		
-		
-		// foreach	
-		for (String nome : lista) {
+		for (String nome : listaLinked) {
 			System.out.println(nome);
 		}
 		
-		System.out.println(lista.contains("Giovana"));
-		System.out.println(lista.contains("Giovanna"));
-		
-		System.out.println(lista.indexOf("Flávio"));
-		System.out.println(lista.indexOf("Marihá"));
-		System.out.println(lista.indexOf("Ederson"));
 		
 		
 		
-		lista.remove("Marihá");
+		
+		
+//		ArrayList<String> lista = new ArrayList<String>();
+//		lista.add("Victor");
+//		lista.add("Flávio");
+//		lista.add("Giovanna");
+//		lista.add("Marihá");
+//		
+//		lista.add(2, "Lucas");
+//		lista.set(1, "Moreni");
+//		
+//		
+//		// foreach	
+//		for (String nome : lista) {
+//			System.out.println(nome);
+//		}
+//		
+//		System.out.println(lista.contains("Giovana"));
+//		System.out.println(lista.contains("Giovanna"));
+//		
+//		System.out.println(lista.indexOf("Flávio"));
+//		System.out.println(lista.indexOf("Marihá"));
+//		System.out.println(lista.indexOf("Ederson"));
+//		
+//		
+//		
+//		lista.remove("Marihá");
 		
 		
 		
