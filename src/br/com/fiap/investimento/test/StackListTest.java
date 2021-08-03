@@ -16,7 +16,7 @@ public class StackListTest {
 		
 		System.out.println(stack);
 		
-		stack.pop();
+		stack.pop(); // remove um item da fila
 		
 		System.out.println(stack);
 		
