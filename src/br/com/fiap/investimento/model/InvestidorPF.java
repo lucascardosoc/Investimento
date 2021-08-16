@@ -63,6 +63,11 @@ public class InvestidorPF extends Investidor {
 	}
 
 	
+	@Override
+	public int hashCode() {
+		return this.getInvestidorId();
+	}
+	
 	
 	
 	
