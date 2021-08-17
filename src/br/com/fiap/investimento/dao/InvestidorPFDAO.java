@@ -4,12 +4,15 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import br.com.fiap.investimento.exceptions.DadoNaoAlteradoException;
+import br.com.fiap.investimento.exceptions.DadoNaoRemovidoException;
+import br.com.fiap.investimento.exceptions.DataBaseException;
 import br.com.fiap.investimento.model.InvestidorPF;
 
 public class InvestidorPFDAO implements GenericDAO<InvestidorPF, Integer>{
 	
 
-	public List<InvestidorPF> listarTodos() {
+	public List<InvestidorPF> listarTodos() throws DataBaseException {
 		
 		// Obtendo o Driver - Oracle / Mysql / SQLServer
 		// Abrindo a Conexão
@@ -31,22 +34,22 @@ public class InvestidorPFDAO implements GenericDAO<InvestidorPF, Integer>{
 	
 
 	@Override
-	public InvestidorPF consultarPorId(Integer chave) {
+	public InvestidorPF consultarPorId(Integer chave) throws DataBaseException {
 		return null;
 	}
 
 	@Override
-	public Integer cadastrar(InvestidorPF entidade) {
+	public Integer cadastrar(InvestidorPF entidade) throws DataBaseException {
 		return null;
 	}
 
 	@Override
-	public void alterar(InvestidorPF entidade) {
+	public void alterar(InvestidorPF entidade) throws DataBaseException, DadoNaoAlteradoException {
 		
 	}
 
 	@Override
-	public void excluir(Integer chave) {
+	public void excluir(Integer chave) throws DataBaseException, DadoNaoRemovidoException {
 		// Obtendo o Driver - Oracle / Mysql / SQLServer
 		// Abrindo a Conexão
 		// Preparando o comando SQL
@@ -54,6 +57,12 @@ public class InvestidorPFDAO implements GenericDAO<InvestidorPF, Integer>{
 		// Executo o comando SQL
 		// Obtendo o retorno do SQL
 		// Retorno sucesso ou falha
+		
+		if (chave.intValue() == 0 || chave.intValue() == 100) {
+			throw new DadoNaoRemovidoException();
+		}
+		
+		
 		System.out.println("Investidor excluído com sucesso: " + chave);
 	}
 }
