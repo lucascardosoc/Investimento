@@ -15,5 +15,22 @@ public class FundoDAO implements GenericDAO<Fundo, Integer> {
 	public Fundo consultarPorId(Integer chave) {
 		return null;
 	}
+
+	@Override
+	public Integer cadastrar(Fundo entidade) {
+		return null;
+	}
+
+	@Override
+	public void alterar(Fundo entidade) {
+		
+	}
+
+	@Override
+	public void excluir(Integer chave) {
+		
+	}
+	
+	
 	
 }

@@ -6,35 +6,9 @@ import java.util.List;
 
 import br.com.fiap.investimento.model.InvestidorPF;
 
-public class InvestidorPFDAO {
+public class InvestidorPFDAO implements GenericDAO<InvestidorPF, Integer>{
 	
-//	entrada >> processamento >> saída
 
-	// cadastrar - INSERT
-	public boolean cadastrar(InvestidorPF investidor) {
-		// ptocessamento - Comando SQL
-		return true;
-	}
-	
-	
-	// alterar - UPDATE
-	
-	// excluir - DELETE
-	
-	
-	
-	// consultar - SELECT BY ID
-	public InvestidorPF consultarPorId(int id) {
-		// processamento
-		return new InvestidorPF();
-	}
-	
-	public InvestidorPF consultarPorCpf(String cpf) {
-		// processamento
-		return new InvestidorPF();
-	}
-	
-	// listarTodos - SELECT ALL
 	public List<InvestidorPF> listarTodos() {
 		
 		// Obtendo o Driver - Oracle / Mysql / SQLServer
@@ -54,4 +28,34 @@ public class InvestidorPFDAO {
 		
 		// Fechando a conexão
 	}
+	
+
+	@Override
+	public InvestidorPF consultarPorId(Integer chave) {
+		return null;
+	}
+
+	@Override
+	public Integer cadastrar(InvestidorPF entidade) {
+		return null;
+	}
+
+	@Override
+	public void alterar(InvestidorPF entidade) {
+		
+	}
+
+	@Override
+	public void excluir(Integer chave) {
+		// Obtendo o Driver - Oracle / Mysql / SQLServer
+		// Abrindo a Conexão
+		// Preparando o comando SQL
+		// >>>> DELET FROM TB_INVESTIDOR WHERE  ID_INVESTIDOR = chave
+		// Executo o comando SQL
+		// Obtendo o retorno do SQL
+		// Retorno sucesso ou falha
+		System.out.println("Investidor excluído com sucesso: " + chave);
+	}
 }
+
+
