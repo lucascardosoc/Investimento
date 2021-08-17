@@ -8,6 +8,7 @@ import br.com.fiap.investimento.exceptions.DadoNaoAlteradoException;
 import br.com.fiap.investimento.exceptions.DadoNaoRemovidoException;
 import br.com.fiap.investimento.exceptions.DataBaseException;
 import br.com.fiap.investimento.model.InvestidorPF;
+import br.com.fiap.investimento.tools.DBTools;
 
 public class InvestidorPFDAO implements GenericDAO<InvestidorPF, Integer>{
 	
@@ -58,10 +59,11 @@ public class InvestidorPFDAO implements GenericDAO<InvestidorPF, Integer>{
 		// Obtendo o retorno do SQL
 		// Retorno sucesso ou falha
 		
+		DBTools.obterConexao();
+		
 		if (chave.intValue() == 0 || chave.intValue() == 100) {
 			throw new DadoNaoRemovidoException();
 		}
-		
 		
 		System.out.println("Investidor excluído com sucesso: " + chave);
 	}
